@@ -28,8 +28,7 @@ async def call_app(application, event):
             params=event["queryStringParameters"],
             content=event["body"],
         )
-        response = await client.send(request)
-        return response
+        return await client.send(request)
 
 
 try:
